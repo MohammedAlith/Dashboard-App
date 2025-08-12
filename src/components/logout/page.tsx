@@ -21,10 +21,8 @@ export default function LogoutButton() {
 
   return (
     <button
-      className="bg-white rounded-lg p-2 cursor-pointer"
-      onClick={handleLogout}
-      aria-label="Logout"
-    >
+      className="bg-white rounded-lg p-2 cursor-pointer "
+      onClick={handleLogout}>
       <LuLogOut />
     </button>
   );

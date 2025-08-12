@@ -120,7 +120,7 @@ console.log('bloodGroup:', bloodGroupArray);
 
 
   return (
-    <div className="flex flex-col  bg-blue-100 ">
+    <div className="flex flex-col  bg-blue-100 pt-10">
   <div className="flex flex-col justify-center w-full items-center">
     {error && <p className="text-red-500">Error: {error}</p>}
     <h1 className="text-3xl font-bold mb-4 mt-4">Users</h1>

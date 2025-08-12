@@ -1,5 +1,5 @@
-'use server';
 
+'use server'
 import { API_URLS } from '../api';
 import { cookies } from 'next/headers';
 
@@ -27,7 +27,7 @@ export async function LoginApi(formData: FormData): Promise<LoginResult> {
       value: data.accessToken,
       path: '/',
       httpOnly: true,
-      maxAge: 60 * 2,
+      maxAge: 60*5,
     });
 
 

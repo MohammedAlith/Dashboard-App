@@ -21,7 +21,7 @@ export function Navbar() {
   ];
 
   return (
-    <div className="bg-blue-600 p-3 pe-5 flex justify-between">
+    <div className="bg-blue-600 p-3 pe-5 flex justify-between fixed w-full">
       <div className="flex gap-3">
         {navItems.map((item) => (
           <button

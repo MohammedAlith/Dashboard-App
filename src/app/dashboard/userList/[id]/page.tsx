@@ -1,7 +1,7 @@
 
  import { API_URLS } from "@/components/api";
  import Link from "next/link";
-import { LuLogOut } from "react-icons/lu";
+import { IoIosArrowBack } from "react-icons/io";
 
 
 interface User {
@@ -63,20 +63,17 @@ export default async function Page({ params }: Props) {
   const user = await getUser(params.id);
 
   return (
-    <div className="flex flex-col   bg-blue-100 pb-5">
+    <div className="flex flex-col bg-blue-100 pb-5 pt-10">
  
-  <div className="self-end m-2">
-  
-
-  <Link href="/dashboard/userList ">
+  <div className="self-end m-5">
+   <Link href="/dashboard/userList ">
     <button className="bg-amber-500 rounded-lg p-2 cursor-pointer text-2xl font-bold ">
-      <LuLogOut />
-    </button>
+       <IoIosArrowBack />    </button>
   </Link>
 </div>
 
 
-  <div className="flex flex-col   m-auto rounded-lg p-10 gap-3  bg-blue-300">
+  <div className="flex flex-col  m-auto rounded-lg p-10 gap-3  bg-blue-300">
    <h1 className="text-2xl font-bold ">User Details</h1>
    
     <div>

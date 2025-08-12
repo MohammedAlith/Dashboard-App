@@ -15,7 +15,7 @@ export default async function RootLayout({
   const accessToken = cookie.get('accessToken')?.value || null;
   return (
     <html lang="en">
-      <body>
+      <body className='bg-blue-100'>
     <AuthProvider initialToken={accessToken}>
           {children}
         </AuthProvider>

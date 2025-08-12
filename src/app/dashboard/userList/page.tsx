@@ -52,7 +52,7 @@ useEffect(() => {
 
   if (error) return <p className="text-red-500">Error: {error}</p>;
  if(!data){
-  return <div className='flex items-center justify-center h-screen w-screen'>
+  return <div className='flex items-center justify-center h-screen w-screen '>
   <h1 className='text-2xl'>Loading</h1>
   </div>
 }
@@ -74,11 +74,11 @@ useEffect(() => {
   const next = () => setCurrentPage((page) =>page + 1,);
 
   return (
-    <div className="flex flex-col justify-center items-center  bg-blue-100 pb-5">
+    <div className="flex flex-col justify-center items-center h-full  pb-5 pt-12">
       <h1 className="text-2xl font-bold mb-4 mt-4">All Users</h1>
       <table className="border-collapse border-3 border-gray-300">
         <thead>
-          <tr>
+          <tr className="text-xl">
             <th className="border-3 border-gray-300 p-2 text-left">ID</th>
             <th className="border-3 border-gray-300 p-2 text-left">Name</th>
             <th className="border-3 border-gray-300 p-2 text-left">Gender</th>
@@ -97,7 +97,7 @@ useEffect(() => {
               <td className="border-3 border-gray-300 p-2">{user.gender}</td>
               <td className="border-3 border-gray-300 p-2">{user.email}</td>
               <td className="border-3 border-gray-300 p-2">{user.phone}</td>
-              <td className="border-3 border-gray-300 p-2 text-blue-600 cursor-pointer" 
+              <td className="border-3 border-gray-300 p-2 text-blue-600 text-xl cursor-pointer" 
               onClick={() => router.push(`/dashboard/userList/${user.id}`)}
               >view more</td>
             </tr>
@@ -114,7 +114,7 @@ useEffect(() => {
           <FaAnglesLeft />
         </button>
         <span>
-          Page {currentPage} 
+          Page {currentPage}
         </span>
         <button
           onClick={next}
