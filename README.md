@@ -29,7 +29,7 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Project Description
+## Task Description
 -Create a Dashboard Page with profiles, UserDetails
 -Authentication on User Login with server actions
 -Search Filter action on user with client Side
