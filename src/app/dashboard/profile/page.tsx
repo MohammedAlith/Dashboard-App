@@ -45,7 +45,7 @@ export default async function DataPage() {
 
   return (
     <div className="flex flex-col items-center justify-center  h-screen pt-10">
-      <h1 className="text-2xl font-bold mt-4 mb-4">User Details</h1>
+      <h1 className="text-2xl font-bold mt-4 mb-4">User Profile</h1>
       <div className="flex flex-col m-auto mt-2 bg-blue-300 p-5 rounded-lg gap-2 font-normal">
         <div>
           <img
