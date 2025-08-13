@@ -48,11 +48,13 @@ const getUser = async (id: string): Promise<User | undefined> => {
   }
 };
 
-export default async function Page({
-  params,
-}: {
+
+interface UserPageProps {
   params: { id: string };
-}) {
+}
+
+
+export default async function Page({ params }: UserPageProps) {
   const user = await getUser(params.id);
 
   return (
