@@ -3,7 +3,7 @@ import Link from "next/link";
 import { IoIosArrowBack } from "react-icons/io";
 
 interface User {
-  id: string;
+  
   firstName: string;
   lastName: string;
   age: string;
@@ -49,13 +49,12 @@ const getUser = async (id: string): Promise<User | undefined> => {
 };
 
 
-interface UserPageProps {
-  params: { id: string };
-}
 
 
-export default async function Page({ params }: UserPageProps) {
-  const user = await getUser(params.id);
+
+export default async function Page({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params; 
+  const user = await getUser(id);
 
   return (
     <div className="flex flex-col bg-blue-100 pb-5 pt-10">
@@ -152,3 +151,4 @@ export default async function Page({ params }: UserPageProps) {
     </div>
   );
 }
+ 
